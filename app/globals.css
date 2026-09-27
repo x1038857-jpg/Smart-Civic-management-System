@@ -1,21 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import { createClient } from '@supabase/supabase-js'
 
-:root {
-  --navy: #0a1931;
-  --ivory: #fffff0;
-  --gold: #c5a880;
-  --mist: #f4f3ee;
-}
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: var(--mist);
-  color: var(--navy);
-  font-family: Arial, sans-serif;
-}
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)
