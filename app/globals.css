@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0a1931;
+  --ivory: #fffff0;
+  --gold: #c5a880;
+  --mist: #f4f3ee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--mist);
+  color: var(--navy);
+  font-family: Arial, sans-serif;
+}
